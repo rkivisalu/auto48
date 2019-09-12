@@ -1,19 +1,19 @@
 import {
-  ARTICLE_PAGE_LOADED,
-  ARTICLE_PAGE_UNLOADED,
+  CAR_PAGE_LOADED,
+  CAR_PAGE_UNLOADED,
   ADD_COMMENT,
   DELETE_COMMENT
 } from '../constants/actionTypes';
 
 export default (state = {}, action) => {
   switch (action.type) {
-    case ARTICLE_PAGE_LOADED:
+    case CAR_PAGE_LOADED:
       return {
         ...state,
-        article: action.payload[0].article,
+        car: action.payload[0].car,
         comments: action.payload[1].comments
       };
-    case ARTICLE_PAGE_UNLOADED:
+    case CAR_PAGE_UNLOADED:
       return {};
     case ADD_COMMENT:
       return {

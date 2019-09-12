@@ -6,7 +6,7 @@ import {
   ADD_TAG,
   EDITOR_PAGE_LOADED,
   REMOVE_TAG,
-  ARTICLE_SUBMITTED,
+  CAR_SUBMITTED,
   EDITOR_PAGE_UNLOADED,
   UPDATE_FIELD_EDITOR
 } from '../constants/actionTypes';
@@ -23,7 +23,7 @@ const mapDispatchToProps = dispatch => ({
   onRemoveTag: tag =>
     dispatch({ type: REMOVE_TAG, tag }),
   onSubmit: payload =>
-    dispatch({ type: ARTICLE_SUBMITTED, payload }),
+    dispatch({ type: CAR_SUBMITTED, payload }),
   onUnload: payload =>
     dispatch({ type: EDITOR_PAGE_UNLOADED }),
   onUpdateField: (key, value) =>
@@ -37,7 +37,8 @@ class Editor extends React.Component {
     const updateFieldEvent =
       key => ev => this.props.onUpdateField(key, ev.target.value);
     this.changeTitle = updateFieldEvent('title');
-    this.changeDescription = updateFieldEvent('description');
+    this.changePrice = updateFieldEvent('price');
+    this.changeKw = updateFieldEvent('kw');
     this.changeBody = updateFieldEvent('body');
     this.changeTagInput = updateFieldEvent('tagInput');
 
@@ -54,18 +55,19 @@ class Editor extends React.Component {
 
     this.submitForm = ev => {
       ev.preventDefault();
-      const article = {
+      const car = {
         title: this.props.title,
         price: this.props.price,
+        kw: this.props.kw,
         description: this.props.description,
         body: this.props.body,
         tagList: this.props.tagList
       };
 
-      const slug = { slug: this.props.articleSlug };
-      const promise = this.props.articleSlug ?
-        agent.Articles.update(Object.assign(article, slug)) :
-        agent.Articles.create(article);
+      const slug = { slug: this.props.carSlug };
+      const promise = this.props.carSlug ?
+        agent.Cars.update(Object.assign(car, slug)) :
+        agent.Cars.create(car);
 
       this.props.onSubmit(promise);
     };
@@ -75,7 +77,7 @@ class Editor extends React.Component {
     if (this.props.match.params.slug !== nextProps.match.params.slug) {
       if (nextProps.match.params.slug) {
         this.props.onUnload();
-        return this.props.onLoad(agent.Articles.get(this.props.match.params.slug));
+        return this.props.onLoad(agent.Cars.get(this.props.match.params.slug));
       }
       this.props.onLoad(null);
     }
@@ -83,7 +85,7 @@ class Editor extends React.Component {
 
   componentWillMount() {
     if (this.props.match.params.slug) {
-      return this.props.onLoad(agent.Articles.get(this.props.match.params.slug));
+      return this.props.onLoad(agent.Cars.get(this.props.match.params.slug));
     }
     this.props.onLoad(null);
   }
@@ -118,7 +120,7 @@ class Editor extends React.Component {
                         type="text"
                         placeholder="Price"
                         value={this.props.price}
-                        onChange={this.price} />
+                        onChange={this.changePrice} />
                   </fieldset>
 
                   <fieldset className="form-group">
@@ -126,8 +128,8 @@ class Editor extends React.Component {
                       className="form-control"
                       type="text"
                       placeholder="kw"
-                      value={this.props.description}
-                      onChange={this.changeDescription} />
+                      value={this.props.kw}
+                      onChange={this.changeKw} />
                   </fieldset>
 
                   <fieldset className="form-group">
@@ -170,7 +172,7 @@ class Editor extends React.Component {
                     type="button"
                     disabled={this.props.inProgress}
                     onClick={this.submitForm}>
-                    Publish Article
+                    Publish Car
                   </button>
 
                 </fieldset>
