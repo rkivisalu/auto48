@@ -36,10 +36,6 @@ const CarPreview = props => {
   return (
     <div className="car-preview">
       <div className="car-meta">
-        <Link to={`/@${car.author.username}`}>
-          <img src={car.author.image} alt={car.author.username} />
-        </Link>
-
         <div className="info">
           <Link className="author" to={`/@${car.author.username}`}>
             {car.author.username}
