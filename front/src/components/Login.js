@@ -44,9 +44,9 @@ class Login extends React.Component {
       <div className="auth-page">
         <div className="container page">
           <div className="row">
-
             <div className="col-md-6 offset-md-3 col-xs-12">
               <h1 className="text-xs-center">Sign In</h1>
+              
               <p className="text-xs-center">
                 <Link to="/register">
                   Need an account?
@@ -75,7 +75,7 @@ class Login extends React.Component {
                       value={password}
                       onChange={this.changePassword} />
                   </fieldset>
-
+                  <img src="https://images.vexels.com/media/users/3/154251/isolated/preview/fef0c563c39f2746c35604e969ffe3ef-bmw-car-front-view-silhouette-by-vexels.png" className="text-xs-center" height="80px" width="80px"></img>
                   <button
                     className="btn btn-lg btn-primary pull-xs-right"
                     type="submit"

@@ -35,7 +35,8 @@ class Car extends React.Component {
       return null;
     }
 
-    const markup = { __html: marked(this.props.car.body, { sanitize: true }) };
+    const markup = { __html:  marked(this.props.car.body, { sanitize: true }) };
+    const markup1 = { __html: marked(this.props.car.kw, { sanitize: true }) };
     const canModify = this.props.currentUser &&
       this.props.currentUser.username === this.props.car.author.username;
     return (
@@ -45,9 +46,12 @@ class Car extends React.Component {
           <div className="container">
 
             <h1>{this.props.car.title}</h1>
+            <h3>Võimsus:{this.props.car.kw}kw</h3>
+            <h3>Hind:{this.props.car.kw}€</h3>
             <CarMeta
               car={this.props.car}
               canModify={canModify} />
+              
 
           </div>
         </div>
@@ -56,7 +60,7 @@ class Car extends React.Component {
 
           <div className="row car-content">
             <div className="col-xs-12">
-
+              <h2>Kirjeldus:</h2>
               <div dangerouslySetInnerHTML={markup}></div>
 
 
@@ -64,7 +68,7 @@ class Car extends React.Component {
             </div>
           </div>
 
-          <hr />
+          
 
           <div className="car-actions">
           </div>

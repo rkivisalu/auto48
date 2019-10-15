@@ -46,29 +46,17 @@ const CarPreview = props => {
         </div>
 
         <div className="pull-xs-right">
-          <button className={favoriteButtonClass} onClick={handleClick}>
-            <i className="ion-heart"></i> {car.favoritesCount}
-          </button>
+
         </div>
       </div>
 
       <Link to={`/car/${car.slug}`} className="preview-link">
         <h1>{car.title}</h1>
         <p>{car.description}</p>
-        <p>{car.kw}</p>
-        <p>{car.price}</p>
-        <span>Read more...</span>
-        <ul className="tag-list">
-          {
-            car.tagList.map(tag => {
-              return (
-                <li className="tag-default tag-pill tag-outline" key={tag}>
-                  {tag}
-                </li>
-              )
-            })
-          }
-        </ul>
+        <p>Võimsus:{car.kw}kw</p>
+        <p>Hind:{car.price}</p>
+        <span>Loe lisaks..</span>
+
       </Link>
     </div>
   );
