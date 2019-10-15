@@ -51,7 +51,7 @@ class Home extends React.Component {
           <div className="row">
             <MainView />
 
-            
+
           </div>
         </div>
 
