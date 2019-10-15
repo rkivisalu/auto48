@@ -59,19 +59,7 @@ class Car extends React.Component {
 
               <div dangerouslySetInnerHTML={markup}></div>
 
-              <ul className="tag-list">
-                {
-                  this.props.car.tagList.map(tag => {
-                    return (
-                      <li
-                        className="tag-default tag-pill tag-outline"
-                        key={tag}>
-                        {tag}
-                      </li>
-                    );
-                  })
-                }
-              </ul>
+
 
             </div>
           </div>
