@@ -1808,18 +1808,18 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-primary:hover {
     color: #fff;
-    background-color: #449d44;
-    border-color: #419641;
+    background-color: #800a0a;
+    border-color: #800a0a;
 }
 .btn-primary:focus, .btn-primary.focus {
     color: #fff;
-    background-color: #449d44;
-    border-color: #419641;
+    background-color: #800a0a;
+    border-color: #800a0a;
 }
 .btn-primary:active, .btn-primary.active, .open>.btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #449d44;
-    border-color: #419641;
+    background-color: #800a0a;
+    border-color: #800a0a;
     background-image: none;
 }
 .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus, .open>.btn-primary.dropdown-toggle:hover, .open>.btn-primary.dropdown-toggle:focus, .open>.btn-primary.dropdown-toggle.focus {
@@ -1910,18 +1910,18 @@ a.btn.disabled, fieldset[disabled] a.btn {
 }
 .btn-success:hover {
     color: #fff;
-    background-color: #449d44;
-    border-color: #419641;
+    background-color: #800a0a;
+    border-color: #800a0a;
 }
 .btn-success:focus, .btn-success.focus {
     color: #fff;
-    background-color: #449d44;
-    border-color: #419641;
+    background-color: #800a0a;
+    border-color: #800a0a;
 }
 .btn-success:active, .btn-success.active, .open>.btn-success.dropdown-toggle {
     color: #fff;
-    background-color: #449d44;
-    border-color: #419641;
+    background-color: #800a0a;
+    border-color: #800a0a;
     background-image: none;
 }
 .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus, .open>.btn-success.dropdown-toggle:hover, .open>.btn-success.dropdown-toggle:focus, .open>.btn-success.dropdown-toggle.focus {
@@ -2951,10 +2951,10 @@ input[type=submit].btn-block, input[type=reset].btn-block, input[type=button].bt
     color: rgba(0, 0, 0, .8);
 }
 .navbar-light .navbar-nav .nav-link {
-    color: rgba(0, 0, 0, .3);
+    color: rgba(253, 0, 0, 0.76);
 }
 .navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, .6);
+    color: rgb(109, 12, 12);
 }
 .navbar-light .navbar-nav .open>.nav-link, .navbar-light .navbar-nav .open>.nav-link:focus, .navbar-light .navbar-nav .open>.nav-link:hover, .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .active>.nav-link:focus, .navbar-light .navbar-nav .active>.nav-link:hover, .navbar-light .navbar-nav .nav-link.open, .navbar-light .navbar-nav .nav-link.open:focus, .navbar-light .navbar-nav .nav-link.open:hover, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.active:focus, .navbar-light .navbar-nav .nav-link.active:hover {
     color: rgba(0, 0, 0, .8);
@@ -3336,13 +3336,13 @@ a.tag:focus, a.tag:hover {
     background-color: #f80505d9;
 }
 .tag-primary[href]:focus, .tag-primary[href]:hover {
-    background-color: #449d44;
+    background-color: #f80505d9;
 }
 .tag-success {
     background-color: #f80505d9;
 }
 .tag-success[href]:focus, .tag-success[href]:hover {
-    background-color: #449d44;
+    background-color: #610e0e;
 }
 .tag-info {
     background-color: #5bc0de;
@@ -4308,14 +4308,14 @@ button.close {
     background-color: #f80505d9!important;
 }
 a.bg-primary:focus, a.bg-primary:hover {
-    background-color: #449d44!important;
+    background-color: #800a0a!important;
 }
 .bg-success {
     color: #fff!important;
     background-color: #f80505d9!important;
 }
 a.bg-success:focus, a.bg-success:hover {
-    background-color: #449d44!important;
+    background-color: #800a0a!important;
 }
 .bg-info {
     color: #fff!important;
@@ -4693,13 +4693,13 @@ a.text-muted:focus, a.text-muted:hover {
     color: #f80505d9!important;
 }
 a.text-primary:focus, a.text-primary:hover {
-    color: #449d44;
+    color: #800a0a;
 }
 .text-success {
     color: #f80505d9!important;
 }
 a.text-success:focus, a.text-success:hover {
-    color: #449d44;
+    color: #800a0a;
 }
 .text-info {
     color: #5bc0de!important;

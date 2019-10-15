@@ -60,6 +60,12 @@ const LoggedInView = props => {
             {props.currentUser.username}
           </Link>
         </li>
+        <li className="nav-item">
+          <Link to="/settings" className="btn btn-outline-danger">
+            <i className="ion-gear-a"></i>&nbsp;Log out
+          </Link>
+        </li>
+        
 
       </ul>
     );
